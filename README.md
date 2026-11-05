@@ -1,30 +1,42 @@
-# BaiTapAINhom3
-Ung dung Hill Climbing voi Python SimpleAI
-1. Định lý đề xuất: Điều kiện đăng ký môn học tại trường đại học
+# LOCAL SEARCH
 
-Phát biểu định lý:
+## 1. Local Search
 
-Nếu sinh viên hoàn thành môn học tiên quyết thì sinh viên đủ điều kiện đăng ký môn học nâng cao. Nếu sinh viên đủ điều kiện đăng ký môn học nâng cao thì sinh viên được phép đăng ký môn học đó. Vậy nếu sinh viên hoàn thành môn học tiên quyết thì sinh viên được phép đăng ký môn học nâng cao.
+Cài đặt thuật toán tìm kiếm cục bộ (Local Search), sử dụng trạng thái lân cận để tìm kiếm và cải thiện lời giải hiện tại.
 
-Đây là một tình huống có ýa nghĩa thực tế trong môi trường đại học.
-2. Biểu diễn định lý bằng Logic
+Quá trình thực hiện:
 
-Đặt các mệnh đề:
+- Khởi tạo trạng thái ban đầu.
+- Sinh các trạng thái lân cận.
+- Đánh giá và lựa chọn trạng thái tốt hơn.
+- Lặp lại quá trình tìm kiếm cho đến khi đạt điều kiện dừng.
 
-Ký hiệu
-Nội dung
-p
-Sinh viên hoàn thành môn học tiên quyết
-q
-Sinh viên đủ điều kiện đăng ký môn học nâng cao
-r
-Sinh viên được phép đăng ký môn học nâng cao
+## 2. Hybrid Adaptive Local Search
 
-Hai giả thiết:
+Cài đặt thuật toán tìm kiếm cục bộ kết hợp cơ chế thích nghi (Hybrid Adaptive Local Search), nhằm cải thiện khả năng tìm kiếm và hạn chế tình trạng mắc kẹt tại cực trị địa phương.
 
-p->q
+Thuật toán tập trung vào:
 
-q->r
-Kết luận cần chứng minh:
-p->r
+- Khám phá các trạng thái lân cận.
+- Điều chỉnh chiến lược tìm kiếm theo quá trình thực hiện.
+- Cải thiện chất lượng lời giải.
+- Tăng khả năng thoát khỏi vùng tìm kiếm không hiệu quả.
+
+## 3. Source Code
+
+| File                              | Nội dung                                 |
+| --------------------------------- | ---------------------------------------- |
+| `Local Sreach.py`                 | Thuật toán Local Search cơ bản.          |
+| `Hybrid Adaptive Local Search.py` | Thuật toán Hybrid Adaptive Local Search. |
+
+## 4. Cách chạy
+
+```bash
+python "Local Sreach.py"
+```
+
+```bash
+python "Hybrid Adaptive Local Search.py"
+```
+
 
