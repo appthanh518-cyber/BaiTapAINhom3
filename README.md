@@ -1,30 +1,61 @@
-# BaiTapAINhom3
-Ung dung Hill Climbing voi Python SimpleAI
-1. Định lý đề xuất: Điều kiện đăng ký môn học tại trường đại học
+# LOCAL SEARCH & HYBRID ADAPTIVE LOCAL SEARCH
 
-Phát biểu định lý:
+## 1. Local Search
 
-Nếu sinh viên hoàn thành môn học tiên quyết thì sinh viên đủ điều kiện đăng ký môn học nâng cao. Nếu sinh viên đủ điều kiện đăng ký môn học nâng cao thì sinh viên được phép đăng ký môn học đó. Vậy nếu sinh viên hoàn thành môn học tiên quyết thì sinh viên được phép đăng ký môn học nâng cao.
+Local Search là thuật toán tìm kiếm cục bộ, bắt đầu từ một trạng thái ban đầu và liên tục tìm kiếm các trạng thái lân cận để cải thiện chất lượng lời giải.
 
-Đây là một tình huống có ýa nghĩa thực tế trong môi trường đại học.
-2. Biểu diễn định lý bằng Logic
+**Quy trình hoạt động:**
+- Khởi tạo trạng thái ban đầu.
+- Sinh các trạng thái lân cận.
+- Đánh giá và lựa chọn trạng thái tốt hơn.
+- Tiếp tục tìm kiếm cho đến khi đạt điều kiện dừng.
 
-Đặt các mệnh đề:
+**Hạn chế:**
+- Dễ mắc kẹt tại cực trị địa phương.
+- Khả năng khám phá không gian tìm kiếm còn hạn chế.
+- Có thể dừng tại một lời giải chưa tối ưu.
+- Hiệu quả phụ thuộc nhiều vào trạng thái khởi tạo và chiến lược lựa chọn lân cận.
 
-Ký hiệu
-Nội dung
-p
-Sinh viên hoàn thành môn học tiên quyết
-q
-Sinh viên đủ điều kiện đăng ký môn học nâng cao
-r
-Sinh viên được phép đăng ký môn học nâng cao
+## 2. Hybrid Adaptive Local Search
 
-Hai giả thiết:
+Local Search cơ bản có ưu điểm về sự đơn giản và tốc độ, tuy nhiên khả năng tìm kiếm có thể bị hạn chế khi gặp những vùng không gian có nhiều cực trị địa phương.
 
-p->q
+Vì vậy, Hybrid Adaptive Local Search được xây dựng nhằm kết hợp và điều chỉnh chiến lược tìm kiếm trong quá trình thực hiện.
 
-q->r
-Kết luận cần chứng minh:
-p->r
+Mục tiêu chính:
+- Hạn chế tình trạng mắc kẹt tại cực trị địa phương.
+- Tăng khả năng khám phá không gian trạng thái.
+- Cải thiện chất lượng lời giải.
+- Nâng cao khả năng thích nghi với từng giai đoạn tìm kiếm.
 
+## 3. So sánh hai thuật toán
+
+| Tiêu chí | Local Search | Hybrid Adaptive Local Search |
+|---|---|---|
+| Cực trị địa phương | Dễ mắc kẹt | Hướng đến hạn chế |
+| Khám phá không gian | Hạn chế | Tăng cường |
+| Khả năng thích nghi | Thấp | Cao hơn |
+| Chất lượng lời giải | Có thể chưa tối ưu | Hướng đến lời giải tốt hơn |
+| Chiến lược tìm kiếm | Cơ bản | Kết hợp và điều chỉnh |
+| Khả năng tiếp tục tìm kiếm | Có thể dừng sớm | Hướng đến giảm tình trạng dừng sớm |
+
+## 4. Source Code
+
+| File | Nội dung |
+|---|---|
+| `Local_Search.py` | Cài đặt thuật toán Local Search cơ bản. |
+| `Hybrid Adaptive Local Search.py` | Cài đặt thuật toán Hybrid Adaptive Local Search. |
+
+## 5. Cách chạy
+
+**Local Search:**
+
+```bash
+python "Local_Search.py"
+```
+
+**Hybrid Adaptive Local Search:**
+
+```bash
+python "Hybrid Adaptive Local Search.py"
+```
